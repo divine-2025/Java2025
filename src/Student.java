@@ -33,7 +33,9 @@ public class Student {
     }
     public Student()
     {
+
         System.out.println(" default  constructor ");
+
     }
 
     public Student(String name, int rollNo) {
