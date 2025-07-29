@@ -9,8 +9,5 @@ public class BankOfCanada {
     public double RateOfInterest() {
     return (rateOfInterest);
     }
-//    public double RateOfInterest(double internalBankRate) {
-//        return (userAmount*rateOfInterest)/100;
-//    }
 
 }
