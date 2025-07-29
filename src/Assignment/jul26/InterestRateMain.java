@@ -7,8 +7,8 @@ public class InterestRateMain {
         String answer ;
         int  optionValue;
         Scanner scanner =new Scanner(System.in);
-        BankOfCanada bankOfCanada = new BankOfCanada();
-        bankOfCanada.rateOfInterest= 5.0;
+
+        BankOfCanada.rateOfInterest= 5.0;
 
         do {
             System.out.println("*** Select any Bank For Print Interest Rate ***\n"+" 0 for Bank Of Canada"+ "\n 1 for BMO"+"\n 2 for Scotia"+"\n 3 for TD \n"+" 4 for RBC" + "\n 5 for Pragra \n");
@@ -17,6 +17,7 @@ public class InterestRateMain {
 
             switch (optionValue){
                 case 0:{
+                    BankOfCanada bankOfCanada = new BankOfCanada();
                     System.out.print("Bank Of Canada Interest Rate : ");
                     System.out.println( bankOfCanada.RateOfInterest());
                     break;
@@ -53,7 +54,8 @@ public class InterestRateMain {
                     break;
                 }
                 case 5:{
-                    BankOfCanada pragraObj = new BankOfCanada();
+                    BankOfCanada pragraObj = new InternalBank();
+                    pragraObj.internalRate=0.0;
                     System.out.print("New Pragra Bank Interest Rate : ");
                     System.out.println(pragraObj.RateOfInterest());
                     break;
@@ -68,13 +70,10 @@ public class InterestRateMain {
             }
 
             System.out.println("Do you Want to Continue....Y/N ?");
-            answer = scanner.next();
-            answer =answer.toUpperCase();
-            System.out.println(answer);
+            answer = scanner.next().toUpperCase();
             while ( !answer.equals("Y") && !answer.equals("N")){
                 System.out.println("Please Enter Valid Input \nDo you Want to Continue....Y/N ?");
-                answer = scanner.next();
-                answer =answer.toUpperCase();
+                answer = scanner.next().toUpperCase();
             }
             if (answer.equals("N")){
                 break;
