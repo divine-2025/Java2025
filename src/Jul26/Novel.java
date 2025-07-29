@@ -1,11 +1,22 @@
 package Jul26;
 
 public class Novel extends Book {
-    String description;
+    String description ="No Description";
 
+    public Novel()
+    {
+     super();
+    }
     @Override
     public void bookDetails() {
-        super.bookDetails();
-        System.out.println(description);
+
+
+
+
+        System.out.println("Upcasting");
+        String x= super.author;
+
     }
+
+
 }

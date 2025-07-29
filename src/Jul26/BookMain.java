@@ -4,6 +4,7 @@ public class BookMain {
     public static void main(String[] args) {
 
 
+
         Fiction fiction = new Fiction();
         NonFiction nonFiction = new NonFiction();
 
@@ -17,10 +18,12 @@ public class BookMain {
         nonFiction.price = 200;
         nonFiction.title = "Hiroshima";
         nonFiction.productionCompany = "Book Company";
-        nonFiction.description = "Not Available";
+        nonFiction.description = "it is a novel";
 
-        fiction.bookDetails();
-
-        nonFiction.bookDetails();
+//        fiction.bookDetails(fiction.description);
+//        fiction.bookDetails();
+//        nonFiction.bookDetails(nonFiction.description);
+        Book book = new Fiction();
+        book.bookDetails();
     }
 }
