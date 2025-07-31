@@ -23,39 +23,34 @@ public class InterestRateMain {
                     break;
                 }
                 case 1:{
-                    BankOfCanada bmoObject = new InternalBank();
-                    bmoObject.internalRate=1.15;
+                    BankOfCanada bmoObject = new InternalBank(1.15);
                     System.out.print("BMO Interest Rate : ");
                     System.out.println(bmoObject.RateOfInterest());
                     break;
                 }
 
                 case 2:{
-                    BankOfCanada scotiaObj = new InternalBank();
-                    scotiaObj.internalRate=1.10;
+                    BankOfCanada scotiaObj = new InternalBank(1.10);
                     System.out.print("Scotia Bank Interest Rate : ");
                     System.out.println( scotiaObj.RateOfInterest());
                     break;
                 }
 
                 case 3:{
-                    BankOfCanada tdObj = new InternalBank();
-                    tdObj.internalRate=1.25;
+                    BankOfCanada tdObj = new InternalBank(1.25);
                     System.out.print("TD Bank Interest Rate : ");
                     System.out.println(tdObj.RateOfInterest());
                     break;
                 }
 
                 case 4:{
-                    BankOfCanada rbcObj = new InternalBank();
-                    rbcObj.internalRate=1.50;
+                    BankOfCanada rbcObj = new InternalBank(1.50);
                     System.out.print("RBC Bank Interest Rate : ");
                     System.out.println(rbcObj.RateOfInterest());
                     break;
                 }
                 case 5:{
-                    BankOfCanada pragraObj = new InternalBank();
-                    pragraObj.internalRate=0.0;
+                    BankOfCanada pragraObj = new InternalBank(0.0);
                     System.out.print("New Pragra Bank Interest Rate : ");
                     System.out.println(pragraObj.RateOfInterest());
                     break;
