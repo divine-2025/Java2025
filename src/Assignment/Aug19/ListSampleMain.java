@@ -7,33 +7,56 @@ import java.util.List;
 public class ListSampleMain {
     public static void main(String[] args) {
         
-        int sum = 0;
         List<Integer> list = new ArrayList<>();
-       // list.add(10 15 25  30 35 45 50
         list.add(10);
-        list.add(15);
+        list.add(75);
         list.add(25);
         list.add(30);
         list.add(35);
         list.add(45);
         list.add(50);
-        Iterator<Integer> iterator = list.iterator();
-        
-        while (iterator.hasNext()){
-            Integer i = iterator.next();
-            sum = sum + i;
+
+        // Sum Of List
+        int sum = 0;
+        Iterator<Integer> iteratorSum = list.iterator();
+        while (iteratorSum.hasNext()){
+            Integer listElement = iteratorSum.next();
+            sum = sum + listElement;
         }
         System.out.println("Sum of List :"+ sum);
 
-        Iterator<Integer> iterator1 = list.iterator();
-        while (iterator1.hasNext()) {
-            Integer i = iterator1.next();
-            if (i % 2 == 0) {
-                iterator1.remove();
+        //Remove even numbers from List
+        Iterator<Integer> iteratorRemove = list.iterator();
+        while (iteratorRemove.hasNext()) {
+            Integer listElement = iteratorRemove.next();
+            if (listElement % 2 == 0) {
+                iteratorRemove.remove();
             }
         }
         System.out.println("\nRemove even numbers from List :"+ list);
 
+        //Maximum in List
+        Iterator<Integer> iteratorMax = list.iterator();
+        Integer max = iteratorMax.next();
+        while (iteratorMax.hasNext()) {
+            Integer iteratorValue = iteratorMax.next();
+            if (max < iteratorValue) {
+                max = iteratorValue;
+            }
+        }
+        System.out.println("\nMaximum Number in List : "+ max);
+
+        //Minimum In List
+        Iterator<Integer> iteratorMin = list.iterator();
+        Integer min = iteratorMin.next();
+
+        while (iteratorMin.hasNext()){
+            Integer iteratorValue = iteratorMin.next();
+            if (min>iteratorValue){
+                min = iteratorValue;
+            }
+        }
+        System.out.println("Minimum Number in List : "+min);
 
 
     }
